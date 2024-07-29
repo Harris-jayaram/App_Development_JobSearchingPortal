@@ -1,0 +1,65 @@
+.recruiter-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
+  }
+  
+  .recruiter-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .button {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button-icon {
+    font-size: 50px; /* Adjust icon size as needed */
+    margin-bottom: 10px;
+  }
+  
+  .search-button .button-icon {
+    color: #4CAF50; /* Green */
+  }
+  
+  .post-button .button-icon {
+    color: #2196F3; /* Blue */
+  }
+  
+
+  
+  .button span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+  }
+  

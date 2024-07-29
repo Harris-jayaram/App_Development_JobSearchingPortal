@@ -1,0 +1,159 @@
+.registration-form-container {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.registration-form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.registration-form-container .user-icon {
+  font-size: 48px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.registration-form-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.registration-form-container .input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.registration-form-container .input-icon {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.registration-form-container input {
+  padding: 12px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.registration-form-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.registration-form-container button {
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+
+  font-size: 16px;
+  cursor: pointer;
+  width: 40%;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.registration-form-container button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.switch-button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.switch-button:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+
+.social-signin {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 32px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.google-icon {
+  color: #DB4437; /* Google brand color */
+}
+
+.github-icon {
+  color: #333; /* GitHub brand color */
+}
+
+@media (max-width: 600px) {
+  .registration-form-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .registration-form-container h2 {
+    font-size: 20px;
+  }
+
+  .registration-form-container .user-icon {
+    font-size: 40px;
+  }
+
+  .registration-form-container input {
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .registration-form-container button,
+  .switch-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .social-icon {
+    font-size: 28px;
+    margin: 0 5px;
+  }
+}

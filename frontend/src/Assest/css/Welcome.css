@@ -1,0 +1,363 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.welcome-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+.logoo{
+  color: #000;
+}
+.logoo1{
+  color: #007bff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 3px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+  z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff007b;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #444;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  margin-top: 100px; /* Adjusted margin to account for fixed navbar */
+  height: calc(100vh - 100px);
+  text-align: center;
+}
+
+.text-content {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.text-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-bar input {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  flex: 1;
+  font-size: 16px;
+}
+
+.search-bar input:focus {
+  border-color: #ff007b;
+  outline: none;
+}
+
+.find-job-button {
+  padding: 15px 30px;
+  background-color: #ff007b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.find-job-button:hover {
+  background-color: #e6006f;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome.css */
+
+/* Modal styling */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.confirm-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* Custom styles for toast notifications */
+.toast-info {
+  background-color: #17a2b8; /* Blue */
+  color: #fff;
+}
+
+.toast-success {
+  background-color: #28a745; /* Green */
+  color: #fff;
+}
+
+.toast-error {
+  background-color: #dc3545; /* Red */
+  color: #fff;
+}
+
+/* Custom styles for Toastify */
+.Toastify__toast--info {
+  background-color: #f0f0f0; /* Light background for info toast */
+  color: #333; /* Dark text color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px; /* Padding inside toast */
+  font-family: Arial, sans-serif; /* Font for toast text */
+}
+
+/* Custom styles for the Yes button in the toast */
+.Toastify__toast--info .toast-button-container button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0 5px; /* Space between buttons */
+}
+
+/* Yes button */
+.Toastify__toast--info .toast-button-yes {
+  background-color: #28a745; /* Green background for Yes */
+  color: white;
+}
+
+.Toastify__toast--info .toast-button-yes:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* No button */
+.Toastify__toast--info .toast-button-no {
+  background-color: #dc3545; /* Red background for No */
+  color: white;
+}
+
+.Toastify__toast--info .toast-button-no:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Countdown timer style */
+.Toastify__toast--info p {
+  margin: 0;
+  font-size: 16px;
+  color: #333; /* Dark text color */
+}
+
+/* Container for the buttons in the toast */
+.toast-button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 1200px; /* Adjust based on layout */
+  margin: 0 auto;
+}
+
+.search-input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+  min-width: 250px; /* Minimum width to maintain layout */
+}
+
+.search-select,
+.search-input {
+  padding: 15px 15px 15px 40px; /* Add padding for icon space */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-select {
+  background-color: #fff;
+}
+
+.search-input {
+  background-color: #fff;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #999; /* Light grey for placeholder */
+  font-size: 16px; /* Larger font size */
+  opacity: 1; /* Ensure placeholder is fully visible */
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px; /* Adjust for better spacing */
+  color: #888;
+  font-size: 20px;
+}
+
+.search-button {
+  background-color: #ff007b;
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.search-button-icon {
+  margin-right: 8px;
+  font-size: 18px; /* Slightly larger icon */
+}
+
+.search-button:hover {
+  background-color: #e6006f;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input-group {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.filter {
+  padding: 70px;
+  margin-right: 80%;
+}
+.logo{
+ 
+  margin-left: 10px;
+}
+.header {
+  background-color: #fff; /* Keep background color white */
+  transition: box-shadow 0.3s ease-in-out;
+}
+.header.scrolled {
+  
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Add shadow when scrolled */
+}
+.footer{
+  padding: 56%;
+}

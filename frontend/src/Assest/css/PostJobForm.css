@@ -1,0 +1,55 @@
+.post-job-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .post-job-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .post-job-form div {
+    margin-bottom: 15px;
+  }
+  
+  .post-job-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .post-job-form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .post-job-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .post-job-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .posted-jobs {
+    margin-top: 20px;
+  }
+  
+  .job-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

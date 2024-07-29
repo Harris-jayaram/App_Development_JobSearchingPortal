@@ -1,0 +1,51 @@
+.domain-jobs {
+  text-align: center;
+  padding: 20px;
+}
+
+.domain-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.domain-button {
+  background-color: #6366f1; /* Purple color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.domain-button:hover {
+  background-color: #4f46e5; /* Darker purple on hover */
+}
+
+.domain-button.active {
+  background-color: #4f46e5; /* Darker purple */
+}
+
+.job-cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  transition: transform 0.5s ease-in-out; /* Smooth transition for card movement */
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  color: #6366f1; /* Purple color */
+}
+
+.nav-button:hover {
+  color: #4f46e5; /* Darker purple on hover */
+}

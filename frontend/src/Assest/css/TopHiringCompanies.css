@@ -1,0 +1,57 @@
+.top-hiring-companies {
+    text-align: center;
+    padding: 40px;
+    /* background-color: #f4f5f7; Slightly darker background for better contrast */
+    border-radius: 12px; /* Rounded corners for the container */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Subtle shadow effect */
+}
+
+.top-hiring-companies h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937; /* Slightly lighter dark color for the heading */
+    margin-bottom: 40px;
+}
+
+.top-hiring-companies .logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow logos to wrap to the next line */
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.top-hiring-companies .logos img {
+    width: 120px; /* Slightly larger for better visibility */
+    height: 120px; /* Maintain aspect ratio */
+    object-fit: contain;
+    border: 2px solid #e2e8f0; /* Light border with a slightly different color */
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #ffffff; /* White background for logos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.top-hiring-companies .logos img:hover {
+    transform: scale(1.08); /* Slightly larger zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More prominent shadow effect */
+    filter: brightness(1.1); /* Slightly brighter effect */
+}
+
+.top-hiring-companies .view-all {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 24px;
+    color: #ffffff;
+    background-color: #4f46e5; /* Darker purple */
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.top-hiring-companies .view-all:hover {
+    background-color: #3730a3; /* Even darker purple on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
