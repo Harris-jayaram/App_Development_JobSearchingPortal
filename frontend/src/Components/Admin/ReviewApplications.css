@@ -1,0 +1,210 @@
+.review-applications-container {
+  display: flex;
+  height: 100vh;
+    
+
+}
+
+.review-applications-content {
+  margin-left: 350px;
+  padding: 20px;
+  width: calc(100% - 250px);
+  background-color: #f4f7f9;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo-container img {
+  width: 180px; /* Slightly smaller for a more compact look */
+  height: auto;
+}
+
+.review-applications-content h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px 10px 8px 35px; /* Adjusted padding for icon space */
+  width: 60%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: url('https://example.com/search-icon.png') no-repeat 10px center; /* Example icon, replace with your own */
+  background-size: 20px;
+}
+
+.search-input::placeholder {
+  font-size: 14px;
+  color: #888;
+}
+
+.filter-select {
+  padding: 8px;
+  width: 35%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.applications-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.application-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.application-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.application-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.application-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.status-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.status-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.status-buttons button:hover {
+  opacity: 0.9;
+}
+
+.status-buttons button:nth-of-type(1) {
+  background-color: #16a085; /* Mark as Reviewed */
+  color: #fff;
+}
+
+.status-buttons button:nth-of-type(2) {
+  background-color: #e53e3e; /* Reject */
+  color: #fff;
+}
+
+.status-buttons button:nth-of-type(3) {
+  background-color: #4f46e5; /* Mark as Ongoing */
+  color: #fff;
+}
+
+/* Modal customization */
+.modal-body h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.modal-body p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.modal-content {
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Adjust icon positioning */
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.search-filter-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding-left: 10px; /* Additional padding to accommodate the search icon */
+  position: relative;
+}
+
+/* Adding icons to status buttons */
+.status-buttons button:nth-of-type(1) {
+  background-color: #16a085; /* Mark as Reviewed */
+  color: #fff;
+  position: relative;
+  padding-left: 35px; /* Padding for icon */
+}
+
+.status-buttons button:nth-of-type(1)::before {
+  content: '\f00c'; /* FontAwesome check icon */
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.status-buttons button:nth-of-type(2) {
+  background-color: #e53e3e; /* Reject */
+  color: #fff;
+  position: relative;
+  padding-left: 35px; /* Padding for icon */
+}
+
+.status-buttons button:nth-of-type(2)::before {
+  content: '\f00d'; /* FontAwesome times icon */
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.status-buttons button:nth-of-type(3) {
+  background-color: #4f46e5; /* Mark as Ongoing */
+  color: #fff;
+  position: relative;
+  padding-left: 35px; /* Padding for icon */
+}
+
+.status-buttons button:nth-of-type(3)::before {
+  content: '\f017'; /* FontAwesome clock icon */
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}

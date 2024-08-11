@@ -1,0 +1,149 @@
+.manage-clients-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f7f9;
+
+}
+
+.manage-clients-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 350px; /* Adjust based on sidebar width */
+
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #333;
+  font-weight: 600;
+}
+
+.add-client-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-client-form input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  width: 25%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.add-client-form input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.add-client-form button {
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  background-color: #4f46e5;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-client-form button:hover {
+  background-color: #3b39d0;
+  transform: scale(1.05);
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.client-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.client-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+}
+
+.client-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.client-logo:hover {
+  border-color: #4f46e5;
+}
+
+.client-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.client-info p {
+  font-size: 15px;
+  color: #666;
+}
+
+.client-card button { 
+  padding: 10px 20px; 
+  border-radius: 6px; 
+  border: none; 
+  background-color: #e53e3e;
+   color: white; 
+   font-size: 13px; 
+   font-weight: 5; 
+   cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; 
+    position: absolute; 
+    bottom: 1%; 
+    left: 50%; 
+    transform: translateX(-50%);
+   }
+
+.client-card button:hover {
+  background-color: #c52c2c;
+  transform: scale(1.05);
+}
+
+/* Animation for client card on add/remove */
+@keyframes card-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.client-card {
+  animation: card-animation 0.5s ease-out;
+}

@@ -8,7 +8,10 @@ const Recruiter = () => {
   const navigate = useNavigate(); // Initialize navigate
 
   const handlePostJobClick = () => {
-    navigate('/post-job'); // Navigate to PostJob page
+    navigate('/login'); // Navigate to PostJob page
+  };
+  const handleHackathonClick = () => {
+    navigate('/hackathon'); // Navigate to PostJob page
   };
 
   return (
@@ -24,7 +27,7 @@ const Recruiter = () => {
           <span>Post<br />a Job</span>
         </div>
         <div className="button hackathon-button">
-          <FontAwesomeIcon icon={faLaptopCode} className="button-icon" />
+          <FontAwesomeIcon icon={faLaptopCode} onClick={handleHackathonClick} className="button-icon" />
           <span>Conduct<br />Hackathon</span>
         </div>
       </div>

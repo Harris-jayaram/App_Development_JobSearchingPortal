@@ -1,0 +1,178 @@
+/* General Container */
+.hackathon-container {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #f0f4f8, #ffffff);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+/* Call Back Section */
+.callback-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.callback-info {
+  flex: 1;
+  text-align: left;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.callback-info:hover {
+  background-color: #e9ecef;
+}
+
+.callback-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #6c63ff;
+}
+
+.callback-info p {
+  font-size: 1.2rem;
+  color: #495057;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.callback-form {
+  flex: 1;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #6c63ff;
+  max-width: 500px;
+  margin-left: auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.callback-form:hover {
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.callback-form h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.submit-button {
+  background-color: #6c63ff;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background-color: #5849d9;
+  transform: translateY(-3px);
+}
+
+/* Hackathon Features */
+.hackathon-features {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px;
+  background: #f1f3f5;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hackathon-features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  position: relative;
+}
+
+.hackathon-features h2::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: #6c63ff;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #6c63ff, #3b3fc7);
+  padding: 30px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #3b3fc7, #1d1f63);
+}
+
+.feature-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fffcfc;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.feature-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #fffcfc;
+}
+
+/* Additional Styling */
+@media (max-width: 768px) {
+  .callback-section {
+      flex-direction: column;
+  }
+
+  .callback-form {
+      margin-left: 0;
+  }
+
+  .features-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}

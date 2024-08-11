@@ -1,0 +1,232 @@
+.update-news-container {
+  display: flex;
+  height: 100vh;
+}
+
+.update-news-content {
+  margin-left: 350px; /* Adjust based on sidebar width */
+  padding: 20px;
+  width: 100%;
+  background-color: #f4f7f9;
+  overflow-y: auto;
+}
+
+.update-news-content h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #333;
+  font-weight: 600;
+}
+
+.news-form {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.news-form input,
+.news-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.news-form input:focus,
+.news-form textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.news-form button {
+  padding: 12px 24px;
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.news-form button:hover {
+  background-color: #3b39d0;
+  transform: scale(1.05);
+}
+
+.news-list {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.news-list h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.news-item-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.news-item-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.news-item-info {
+  flex-grow: 1;
+}
+
+.news-item-info h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.news-item-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.news-item-info button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.news-item-info button:first-of-type {
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+.news-item-info button:first-of-type:hover {
+  background-color: #3b39d0;
+  transform: scale(1.05);
+}
+
+.news-item-info button:last-of-type {
+  background-color: #e53e3e;
+  color: #fff;
+}
+
+.news-item-info button:last-of-type:hover {
+  background-color: #c53030;
+  transform: scale(1.05);
+}
+
+.news-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.news-popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.news-popup-content h2 {
+  margin: 0 0 15px;
+  font-size: 24px;
+  color: #333;
+}
+
+.popup-logo {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.news-popup-content p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-popup:hover {
+  color: #e53e3e;
+}
+/* UpdateNews.css */
+
+.news-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it’s above other content */
+}
+
+.news-popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}

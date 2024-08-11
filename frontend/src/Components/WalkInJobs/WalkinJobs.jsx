@@ -58,9 +58,7 @@ const WalkinJobs = () => {
         ))}
         <button className="nav-button" onClick={handleNextClick}><FaChevronRight /></button>
       </div>
-      <div className="view-all">
-        <a href="https://example.com/view-all">View All</a>
-      </div>
+     
     </div>
   );
 };

@@ -11,22 +11,37 @@ function Registration({ onRegister, switchToLogin }) {
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (username && password && email && phone && address) {
+
+    // Store user data in localStorage
+    localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
+    localStorage.setItem('email', email);
+    localStorage.setItem('phone', phone);
+    localStorage.setItem('address', address);
+
+    // You can also send this data to the backend if needed
+    const response = await fetch('http://localhost:8080/api/users/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username, password, email, phone, address })
+    });
+
+    if (response.ok) {
       onRegister(username, password, email, phone, address);
     } else {
-      alert('Please fill in all the fields.');
+      alert('Failed to register');
     }
   };
 
   const handleGoogleSignIn = () => {
-    // Handle Google sign-in logic here
     window.open('https://accounts.google.com/signin', '_blank');
   };
 
   const handleGithubSignIn = () => {
-    // Handle GitHub sign-in logic here
     window.open('https://github.com/login', '_blank');
   };
 

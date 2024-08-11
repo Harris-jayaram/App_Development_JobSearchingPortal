@@ -23,14 +23,44 @@ const Apply = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Retrieve existing applications from local storage
+    const existingApplications = JSON.parse(localStorage.getItem('applications')) || [];
+    
+    // Create a URL for the resume if it's a file
+    const resumeUrl = formData.resume ? URL.createObjectURL(formData.resume) : '';
+
+    // Add new application
+    const newApplication = {
+      ...formData,
+      jobTitle: job.title,
+      company: job.company,
+      dateApplied: new Date().toISOString().split('T')[0], // Current date
+      resume: resumeUrl
+    };
+
+    existingApplications.push(newApplication);
+    
+    // Save updated applications to local storage
+    localStorage.setItem('applications', JSON.stringify(existingApplications));
+
     toast.success('Application submitted successfully!');
-    // Here you would typically send the data to your backend server
+    // Clear form data after submission
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      resume: null,
+      coverLetter: ''
+    });
   };
 
   return (
     <div className="apply-container">
       <h1>Apply for {job.title} at {job.company}</h1>
       <form onSubmit={handleSubmit} className="apply-form">
+        {/* Form Fields */}
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input 

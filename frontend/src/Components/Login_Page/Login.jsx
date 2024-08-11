@@ -3,13 +3,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import '../../Assest/css/Login.css';
 
-function Login({ onLogin }) {
+function Login({ onLogin, switchToRegister }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onLogin(username, password);
+    const response = await fetch('http://localhost:8080/api/users/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username, password })
+    });
+    if (response.ok) {
+      onLogin(username, password);
+    } else {
+      alert('Invalid username or password');
+    }
   };
 
   return (
@@ -33,6 +44,7 @@ function Login({ onLogin }) {
         />
         <center><button type="submit">Login</button></center>
       </form>
+      <button className="switch-button" onClick={switchToRegister}>Switch to Register</button>
     </div>
   );
 }

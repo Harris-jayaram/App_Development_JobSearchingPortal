@@ -15,6 +15,8 @@ import Recuriter from '../Recuriter/Recuriter';
 import CourseCard from '../Course/CourseCard';
 import JobCard from '../Course/JobCard';
 import Footer from '../Footer/Footer';
+import Chatbot from './Chatbot';
+// import CustomerSection from './CustomerSection';
 const districts = [
   'Coimbatore',
   'Chennai',
@@ -109,17 +111,19 @@ const Welcome = () => {
       <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="logo"><span className='logoo'>Shigo</span><span className='logoo1'>To</span></div>
         <nav className="nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
+          {/* <a href="/home">Home</a> */}
+          <a href="/about">About Us</a>
+          <a href="/blog">Blog</a>
+          <a href="/contactus">Contact Us</a>
+          <a href="/communityfaq">CommunityFAQ</a>
           <button className="logout-button" onClick={handleLogout}>Logout</button>
         </nav>
       </header>
 
       <div className="main-content">
         <div className="text-content">
-          <h1>Welcome to Our Website!</h1>
-          <p>Discover amazing opportunities and connect with experts.</p>
+          <h1>Craft Your Future Success...</h1>
+          <p>Explore Career Paths, Network with Visionaries</p>
         </div>
 
         <div className="search-bar">
@@ -191,9 +195,13 @@ const Welcome = () => {
         <div>
           <JobCard />
         </div>
+        
         <div className="footer">
           <Footer />
         </div>
+      </div>
+      <div>
+        <Chatbot />
       </div>
 
       <ToastContainer />

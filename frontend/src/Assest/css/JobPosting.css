@@ -1,0 +1,253 @@
+/* Container for job posting */
+.job-posting-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #e0e7ff;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Content area styling */
+.job-posting-content {
+  flex: 1;
+  padding: 30px;
+  background: #ffffff;
+  margin: 30px;
+  margin-left: 350px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.job-posting-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Form layout */
+.job-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* General input and placeholder styling */
+.job-form input::placeholder,
+.job-form select::placeholder {
+  font-size: 14px;  /* Smaller placeholder font size */
+  color: #888;  /* Lighter color for placeholders */
+  opacity: 1; 
+  padding: 4%; /* Ensures visibility of the placeholder text */
+}
+
+.job-form input,
+.job-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;  /* Maintain a larger font size for input text */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect to ensure no overlap of input and placeholder */
+.job-form input:focus::placeholder,
+.job-form select:focus::placeholder {
+  font-size: 12px;  /* Placeholder shrinks when focused */
+  color: transparent; 
+   /* Optionally hide placeholder on focus */
+}
+
+.job-form input:focus,
+.job-form select:focus {
+  border-color: #6366f1;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Specific date-picker and time-picker styling */
+.job-form .date-picker,
+.job-form .time-picker {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 1;
+}
+
+.job-form .time-picker {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+  align-items: flex-start;
+}
+
+.job-form .time-picker input {
+  padding: 15px;  /* Increase padding for larger input size */
+  font-size: 18px;  /* Larger font size for better readability */
+  text-align: center;
+  color: #444;  /* Darker color for better contrast */
+  border-radius: 8px;
+  border: 2px solid #ccc;  /* Thicker border for emphasis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-form .time-picker input::placeholder {
+  font-size: 14px;  /* Smaller placeholder size */
+  color: #aaa;
+}
+
+.job-form .time-picker input:focus::placeholder {
+  color: transparent;  /* Hide placeholder on focus to prevent overlap */
+}
+
+.job-form .time-picker label {
+  font-size: 18px;  /* Larger label text */
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.job-form .time-picker button {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 8px;
+  margin-left: 15px;
+  cursor: pointer;
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.job-form .time-picker button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Button styling */
+.job-form button {
+  grid-column: span 2;
+  padding: 10px;
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-form button:hover {
+  background-color: #9790dc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Job list styling */
+.job-list {
+  margin-top: 30px;
+}
+
+.job-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.job-list li {
+  background: #f3f4f6;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.job-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.job-list li button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-list li button:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/* Job Benefits textarea */
+.job-form textarea {
+  grid-column: span 2;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical;
+}
+
+.job-form textarea:focus {
+  border-color: #6366f1;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Job Level and Benefits Select */
+.job-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-form select:focus {
+  border-color: #6366f1;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
