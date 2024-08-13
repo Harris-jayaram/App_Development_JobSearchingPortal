@@ -6,73 +6,72 @@ import { LineChart, Line, PieChart, Pie } from 'recharts';
 import { FaUserAlt, FaDollarSign, FaTasks, FaCalendarAlt, FaNewspaper } from 'react-icons/fa';
 
 const Dashboard = () => {
-  const [data, setData] = useState(() => {
-    const savedData = localStorage.getItem('dashboardData');
-    return savedData ? JSON.parse(savedData) : {}; // Initialize with an empty object if no data
+  // Initialize state with hardcoded data or fetched data
+  const [data, setData] = useState({
+    jobsPosted: [
+      { name: 'January', jobsPosted: 30 },
+      { name: 'February', jobsPosted: 45 },
+      { name: 'March', jobsPosted: 20 },
+      { name: 'April', jobsPosted: 75 },
+    ],
+    applications: [
+      { name: 'January', applications: 200 },
+      { name: 'February', applications: 300 },
+      { name: 'March', applications: 150 },
+      { name: 'April', applications: 400 },
+    ],
+    jobCategories: [
+      { name: 'Engineering', jobs: 50 },
+      { name: 'Marketing', jobs: 30 },
+      { name: 'Sales', jobs: 20 },
+    ],
+    revenue: 120000,
+    activeUsers: 1200,
+    upcomingEvents: [
+      { event: 'Team Meeting', date: '2024-08-20' },
+      { event: 'Project Deadline', date: '2024-08-25' },
+    ],
+    scheduledMeetings: [
+      { title: 'Weekly Sync', date: '2024-08-14' },
+      { title: 'Client Meeting', date: '2024-08-16' },
+    ],
   });
 
-  const [news, setNews] = useState(() => {
-    const savedNews = localStorage.getItem('news');
-    return savedNews ? JSON.parse(savedNews) : []; // Initialize with an empty array if no data
-  });
+  const [news, setNews] = useState([
+    { title: 'New Job Openings Announced', date: '2024-08-10' },
+    { title: 'Company Acquires New Client', date: '2024-08-12' },
+  ]);
 
   const [registrationDetails, setRegistrationDetails] = useState({
-    username: '',
-    email: '',
-    phone: '',
-    address: '',
+    username: 'JohnDoe',
+    email: 'johndoe@example.com',
+    phone: '123-456-7890',
+    address: '123 Main St, Springfield, USA',
   });
 
+  // Simulate live data updates every 5 seconds
   useEffect(() => {
-    // Simulate live data updates every 5 seconds
     const interval = setInterval(() => {
-      setData(prevData => {
-        const updatedData = {
-          ...prevData,
-          jobsPosted: prevData.jobsPosted?.map(item => ({
-            ...item,
-            jobsPosted: item.jobsPosted + Math.floor(Math.random() * 10),
-          })) || [],
-          applications: prevData.applications?.map(item => ({
-            ...item,
-            applications: item.applications + Math.floor(Math.random() * 50),
-          })) || [],
-          activeUsers: prevData.activeUsers + Math.floor(Math.random() * 10), // Update active users
-          revenue: prevData.revenue + Math.floor(Math.random() * 5000), // Update revenue
-        };
-        localStorage.setItem('dashboardData', JSON.stringify(updatedData));
-        return updatedData;
-      });
-    }, 5000); // Update every 5 seconds
+      setData(prevData => ({
+        ...prevData,
+        jobsPosted: prevData.jobsPosted.map(item => ({
+          ...item,
+          jobsPosted: item.jobsPosted + Math.floor(Math.random() * 10),
+        })),
+        applications: prevData.applications.map(item => ({
+          ...item,
+          applications: item.applications + Math.floor(Math.random() * 50),
+        })),
+        activeUsers: prevData.activeUsers + Math.floor(Math.random() * 10),
+        revenue: prevData.revenue + Math.floor(Math.random() * 5000),
+      }));
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    // Fetch registration details from localStorage
-    const username = localStorage.getItem('username');
-    const email = localStorage.getItem('email');
-    const phone = localStorage.getItem('phone');
-    const address = localStorage.getItem('address');
-
-    setRegistrationDetails({
-      username: username || 'N/A',
-      email: email || 'N/A',
-      phone: phone || 'N/A',
-      address: address || 'N/A',
-    });
-  }, []);
-
-  useEffect(() => {
-    // Retrieve news from localStorage when the component mounts
-    const savedNews = localStorage.getItem('news');
-    if (savedNews) {
-      setNews(JSON.parse(savedNews));
-    }
-  }, []);
-
-  const totalJobsPosted = data.jobsPosted?.reduce((sum, item) => sum + item.jobsPosted, 0) || 0;
-  const totalApplications = data.applications?.reduce((sum, item) => sum + item.applications, 0) || 0;
+  const totalJobsPosted = data.jobsPosted.reduce((sum, item) => sum + item.jobsPosted, 0);
+  const totalApplications = data.applications.reduce((sum, item) => sum + item.applications, 0);
 
   return (
     <div className="dashboard-container">
@@ -92,18 +91,18 @@ const Dashboard = () => {
           </div>
           <div className="metric-card">
             <h3>Revenue</h3>
-            <p><FaDollarSign /> {data.revenue?.toLocaleString() || '0'}</p>
+            <p><FaDollarSign /> {data.revenue.toLocaleString()}</p>
           </div>
           <div className="metric-card">
             <h3>Active Users</h3>
-            <p><FaUserAlt /> {data.activeUsers || '0'}</p>
+            <p><FaUserAlt /> {data.activeUsers}</p>
           </div>
         </div>
         <div className="dashboard-charts">
           <div className="chart-container">
             <h3>Jobs Posted Overview</h3>
             <ResponsiveContainer width="100%" height={250}>
-              <BarChart data={data.jobsPosted || []}>
+              <BarChart data={data.jobsPosted}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
                 <YAxis />
@@ -116,7 +115,7 @@ const Dashboard = () => {
           <div className="chart-container">
             <h3>Applications Overview</h3>
             <ResponsiveContainer width="100%" height={250}>
-              <LineChart data={data.applications || []}>
+              <LineChart data={data.applications}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
                 <YAxis />
@@ -130,7 +129,7 @@ const Dashboard = () => {
             <h3>Job Categories Distribution</h3>
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
-                <Pie data={data.jobCategories || []} dataKey="jobs" nameKey="name" fill="#8884d8" />
+                <Pie data={data.jobCategories} dataKey="jobs" nameKey="name" fill="#8884d8" />
                 <Tooltip />
                 <Legend />
               </PieChart>
@@ -140,7 +139,7 @@ const Dashboard = () => {
         <div className="dashboard-upcoming-events">
           <h3>Upcoming Events</h3>
           <ul>
-            {data.upcomingEvents?.map((event, index) => (
+            {data.upcomingEvents.map((event, index) => (
               <li key={index}>
                 <FaCalendarAlt /> {event.date} - {event.event}
               </li>
@@ -164,7 +163,7 @@ const Dashboard = () => {
         <div className="dashboard-scheduled-meetings">
           <h3>Scheduled Meetings</h3>
           <ul>
-            {data.scheduledMeetings?.map((meeting, index) => (
+            {data.scheduledMeetings.map((meeting, index) => (
               <li key={index}>
                 <FaTasks /> {meeting.title} - {meeting.date}
               </li>

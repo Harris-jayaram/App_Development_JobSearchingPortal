@@ -32,15 +32,24 @@ const Welcome = () => {
 
   const handleLogout = () => {
     const id = setInterval(() => {
-      setTimer(prevTimer => {
-        if (prevTimer <= 1) {
-          clearInterval(id);
-          setTimer(0);
-        } else {
-          return prevTimer - 1;
-        }
-      });
+        setTimer(prevTimer => {
+            if (prevTimer <= 1) {
+                clearInterval(id);
+                setTimer(0);
+
+                // Clear the token from session storage
+                sessionStorage.removeItem('token');
+
+                // Optionally, redirect the user to the login page or homepage
+                window.location.href = '/login';
+
+            } else {
+                return prevTimer - 1;
+            }
+        });
     }, 1000);
+
+
 
     setIntervalId(id);
 

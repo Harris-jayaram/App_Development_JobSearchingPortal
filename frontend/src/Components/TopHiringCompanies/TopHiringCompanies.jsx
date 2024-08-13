@@ -3,16 +3,17 @@ import "../../Assest/css/TopHiringCompanies.css";
 
 // Import your logos
 import CapgeminiLogo from "../../Assest/Img/CapgeminiLogo.png";
-import JioLogo from "../../Assest/Img/sbi.png";
-import ICICILogo from "../../Assest/Img/JioLogo.png";
+import JioLogo from "../../Assest/Img/JioLogo.png";
+import ICICILogo from "../../Assest/Img/ICICILogo.jpg"; 
 import SopraSteriaLogo from "../../Assest/Img/SopraSteriaLogo.jpeg";
 import KotakLogo from "../../Assest/Img/Kotak.png";
 import NTTDataLogo from "../../Assest/Img/NTTDataLogo.png";
 import RelianceLogo from "../../Assest/Img/Reliance.jpeg";
 import HPLogo from "../../Assest/Img/HPLogo.png";
 import TechMahindraLogo from "../../Assest/Img/TechMahindraLogo.jpeg";
-import SBILifeLogo from "../../Assest/Img/sbi.png";
+import SBILifeLogo from "../../Assest/Img/zoho.png";
 import LTIMindtreeLogo from "../../Assest/Img/LTIMindtree.png";
+import zoho from "../../Assest/Img/zoho.png";
 
 const TopHiringCompanies = () => {
   return (

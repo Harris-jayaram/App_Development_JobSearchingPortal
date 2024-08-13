@@ -1,209 +1,213 @@
 .dashboard-container {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(135deg, #f7f7f7, #e4e4e4);
-    /* top: 0;
-    left: 890%; */
-  }
-  
-  .dashboard-content {
-    flex: 1;
-    margin-left: 350px; /* Adjust based on sidebar width */
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .dashboard-header {
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .dashboard-metrics {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .metric-card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    flex: 1 1 200px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .metric-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-  
-  .metric-card h3 {
-    margin-bottom: 10px;
-    color: #444;
-    font-size: 1.1em;
-  }
-  
-  .metric-card p {
-    font-size: 1.8em;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .dashboard-charts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .chart-container {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    flex: 1 1 30%;
-    max-width: 30%;
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .chart-container:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-  
-  .chart-container h3 {
-    margin-bottom: 20px;
-    color: #444;
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-  
-  .dashboard-upcoming-events,
-  .dashboard-news,
-  .dashboard-scheduled-meetings {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .dashboard-upcoming-events:hover,
-  .dashboard-news:hover,
-  .dashboard-scheduled-meetings:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dashboard-upcoming-events ul,
-  .dashboard-news ul,
-  .dashboard-scheduled-meetings ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .dashboard-upcoming-events li,
-  .dashboard-news li,
-  .dashboard-scheduled-meetings li {
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    font-size: 1em;
-  }
-  
-  .dashboard-upcoming-events li > svg,
-  .dashboard-news li > svg,
-  .dashboard-scheduled-meetings li > svg {
-    margin-right: 12px;
-    color: #888;
-    font-size: 1.2em;
-  }
-  
-  .dashboard-footer {
-    background: #f0f0f0;
-    text-align: center;
-    padding: 15px;
-    border-top: 1px solid #ddd;
-    color: #666;
-  }
-  
-  .dashboard-footer p {
-    margin: 0;
-    font-size: 0.9em;
-  }
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.dashboard-content {
+  flex: 1;
+  margin-left: 350px;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f4f4f9;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #2c3e50;
+  font-weight: 700;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.dashboard-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.metric-card {
+  background: linear-gradient(135deg, #ffffff, #ececec);
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  flex: 1 1 250px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.metric-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.metric-card h3 {
+  margin-bottom: 15px;
+  color: #34495e;
+  font-size: 1.2em;
+}
+
+.metric-card p {
+  font-size: 2em;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.dashboard-charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  background: linear-gradient(135deg, #ffffff, #ececec);
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  flex: 1 1 30%;
+  max-width: 30%;
+  box-sizing: border-box;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.chart-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.chart-container h3 {
+  margin-bottom: 20px;
+  color: #34495e;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.dashboard-upcoming-events,
+.dashboard-news,
+.dashboard-scheduled-meetings {
+  background: linear-gradient(135deg, #ffffff, #ececec);
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  margin-bottom: 20px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.dashboard-upcoming-events:hover,
+.dashboard-news:hover,
+.dashboard-scheduled-meetings:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-upcoming-events ul,
+.dashboard-news ul,
+.dashboard-scheduled-meetings ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard-upcoming-events li,
+.dashboard-news li,
+.dashboard-scheduled-meetings li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+}
+
+.dashboard-upcoming-events li > svg,
+.dashboard-news li > svg,
+.dashboard-scheduled-meetings li > svg {
+  margin-right: 15px;
+  color: #888;
+  font-size: 1.4em;
+}
+
+.dashboard-footer {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  color: #666;
+  border-radius: 0 0 15px 15px;
+}
+
+.dashboard-footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.registration-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  margin: 20px 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.registration-details:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.registration-details h3 {
+  grid-column: span 4;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  color: #2c3e50;
+  font-weight: 700;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.registration-details .detail-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.registration-details .detail-item:hover {
+  background-color: #f5f5f5;
+}
+
+.registration-details .detail-item:last-child {
+  border-bottom: none;
+}
+
+.registration-details .detail-label {
+  font-size: 16px;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.registration-details .detail-value {
+  font-size: 16px;
+  color: #333;
+}
+
+@media (max-width: 1024px) {
   .registration-details {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr 2fr; /* Four columns with varying widths */
-    gap: 20px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+    grid-template-columns: 1fr 1fr;
   }
-  
-  .registration-details:hover {
-    transform: translateY(-5px); /* Elevate the container on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+@media (max-width: 768px) {
+  .registration-details {
+    grid-template-columns: 1fr;
   }
-  
-  .registration-details h3 {
-    grid-column: span 4; /* Make the heading span all columns */
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-    font-weight: 600;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    text-align: center;
-  }
-  
-  .registration-details .detail-item {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Two columns for label and value */
-    align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
-    transition: background-color 0.3s ease; /* Smooth background color transition */
-  }
-  
-  .registration-details .detail-item:hover {
-    background-color: #f5f5f5; /* Light background color on hover */
-  }
-  
-  .registration-details .detail-item:last-child {
-    border-bottom: none;
-  }
-  
-  .registration-details .detail-label {
-    font-size: 16px;
-    color: #007bff; /* Label color for emphasis */
-    font-weight: 600;
-  }
-  
-  .registration-details .detail-value {
-    font-size: 16px;
-    color: #333;
-  }
-  
-  @media (max-width: 1024px) {
-    .registration-details {
-      grid-template-columns: 1fr 1fr; /* Stack columns on medium screens */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .registration-details {
-      grid-template-columns: 1fr; /* Stack columns on small screens */
-    }
-  }
-  
+}

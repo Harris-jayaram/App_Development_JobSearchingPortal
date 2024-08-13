@@ -120,9 +120,6 @@ const ContactUs = () => {
             Send Message
           </button>
         </form>
-        {/* <button onClick={deleteContactData} className="delete-button">
-          Delete Contact Data
-        </button> */}
         {isGeolocationAvailable ? (
           isGeolocationEnabled ? (
             coords ? (
