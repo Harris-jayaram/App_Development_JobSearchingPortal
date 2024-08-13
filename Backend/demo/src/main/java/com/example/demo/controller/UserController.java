@@ -27,6 +27,16 @@ public class UserController {
             return ResponseEntity.status(400).body(null);
         }
     }
+    @GetMapping
+    public ResponseEntity<List<User>> getAllUsers() {
+        try {
+            List<User> users = userService.getAllUsers();
+            return ResponseEntity.ok(users);
+        } catch (Exception e) {
+            // Handle exceptions related to fetching users
+            return ResponseEntity.status(500).build();
+        }
+    }
 
     @PostMapping("/login")
     public ResponseEntity<String> loginUser(@RequestBody User loginUser) {
@@ -43,16 +53,6 @@ public class UserController {
         }
     }
 
-    @GetMapping
-    public ResponseEntity<List<User>> getAllUsers() {
-        try {
-            List<User> users = userService.getAllUsers();
-            return ResponseEntity.ok(users);
-        } catch (Exception e) {
-            // Handle exceptions related to fetching users
-            return ResponseEntity.status(500).build();
-        }
-    }
 
     @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {

@@ -211,3 +211,68 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* DashBoard.css */
+
+.dashboard-new-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  flex: 1;
+}
+
+.section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.section li svg {
+  margin-right: 10px;
+}
+
+.dashboard-charts .chart-container {
+  margin-bottom: 20px;
+}
+
+.dashboard-upcoming-events, .dashboard-news, .dashboard-scheduled-meetings {
+  margin-top: 20px;
+}
+
+.metric-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-right: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+.dashboard-header {
+  margin-bottom: 20px;
+}
+
+.dashboard-content {
+  padding: 20px;
+}
