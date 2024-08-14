@@ -1,0 +1,33 @@
+// Job Searching Portal Flowchart
+digraph {
+	graph [rankdir=LR]
+	A [label="Job Seeker" shape=oval]
+	B [label="Job Search" shape=rect]
+	C [label="View Job Listings" shape=rect]
+	D [label="Apply for Job" shape=diamond]
+	E [label="View Application Status" shape=rect]
+	F [label=Employer shape=oval]
+	G [label="Post Job" shape=rect]
+	H [label="Manage Job Listings" shape=rect]
+	I [label="Review Applications" shape=rect]
+	J [label="Conduct Hackathon" shape=diamond]
+	K [label=Admin shape=oval]
+	L [label=Login shape=oval]
+	M [label=Dashboard shape=rect]
+	N [label="Manage Users" shape=rect]
+	O [label="Manage Job Postings" shape=rect]
+	P [label="Review Reports" shape=diamond]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	F -> G
+	G -> H
+	H -> I
+	I -> J
+	K -> L
+	L -> M
+	M -> N
+	M -> O
+	M -> P
+}
